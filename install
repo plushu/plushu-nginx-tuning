@@ -16,5 +16,5 @@ EOF
 fi
 
 if [[ "$EUID" == 0 ]]; then
-  chown -R "$PLUSHU_USER" "$PLUSHU_ROOT/nginx/http"
+  chown -R "$PLUSHU_USER:" "$PLUSHU_ROOT/nginx/http"
 fi
