@@ -4,8 +4,8 @@ set -eo pipefail; [[ -n "$PLUSHU_TRACE" ]] && set -x
 mkdir -p "$PLUSHU_ROOT/nginx/http"
 
 # Write some sensible SSL configuration directives
-if [[ ! -f "$PLUSHU_ROOT/nginx/http/ssl.conf" ]]; then
-  cat > "$PLUSHU_ROOT/nginx/http/ssl.conf" <<EOF
+if [[ ! -f "$PLUSHU_ROOT/nginx/http/15_ssl.conf" ]]; then
+  cat > "$PLUSHU_ROOT/nginx/http/15_ssl.conf" <<EOF
 ssl_session_cache shared:SSL:20m;
 ssl_session_timeout 10m;
 
